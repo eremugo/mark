@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path, include, patterns
 from django.conf import settings
 from django.conf.urls.static import static
 from cepat import views
@@ -22,4 +22,7 @@ from cepat import views
 urlpatterns = [
     path('', include('cepat.urls', namespace='cepat')),
     path('admin/', admin.site.urls),
-] + static (settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] if not settings.DEBUG:
+    urlpatterns += patterns('',
+        (r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+    )
