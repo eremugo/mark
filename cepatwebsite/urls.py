@@ -22,7 +22,4 @@ from cepat import views
 urlpatterns = [
     path('', include('cepat.urls', namespace='cepat')),
     path('admin/', admin.site.urls),
-] if not settings.DEBUG:
-    urlpatterns += patterns('',
-        (r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
-    )
+] + static (settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
