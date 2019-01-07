@@ -33,7 +33,6 @@ SECRET_KEY =  os.environ.get('SECRET_KEY', 'ok!jyb&94$zjh3+zc2sz+#=r3ftm8%#a0b#j
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-TEMPLATE_DEBUG = False
 
 ALLOWED_HOSTS = ['cepatwebsite.herokuapp.com']
 
@@ -135,17 +134,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-
-if not DEBUG:
-   MEDIA_URL = '/media/'
-   MEDIA_ROOT =  '/cepatwebsite.herokuapp.com/media'
-   STATIC_ROOT =  '/cepatwebsite.herokuapp.com/static'
-
-   STATICFILES_DIRS= ( 
-        '/cepatwebsite.herokuapp.com/static' 
-    )
-
-
+MEDIA_ROOT =  os.path.join(BASE_DIR, 'cepat/media')
+MEDIA_URL = '/media/'
 
 
 
