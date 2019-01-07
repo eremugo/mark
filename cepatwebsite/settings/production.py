@@ -34,7 +34,7 @@ SECRET_KEY =  os.environ.get('SECRET_KEY', 'ok!jyb&94$zjh3+zc2sz+#=r3ftm8%#a0b#j
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['cepatwebsite.herokuapp.com', '.cepat.com']
+ALLOWED_HOSTS = ['cepatwebsite.herokuapp.com']
 
 
 # Application definition
