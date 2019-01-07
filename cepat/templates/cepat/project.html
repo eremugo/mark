@@ -1,0 +1,191 @@
+{% extends 'cepat/base.html' %}
+{% block title %} CEPAT-South Sudan | PROJECT{% endblock title %}
+{% block content %}
+
+
+
+<!-- Banner -->
+		<div class="banner banner-static">
+			<div class="container">
+				<div class="content row">
+					
+					<div class="imagebg">
+						<img src="/static/cepat/image/banner-inside-f.jpg" alt="">
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<!-- End Banner -->
+	</header>
+	<!-- End Header -->
+
+	<!-- Project Section -->
+	<div class="section section-projects section-pad">
+		<div class="container">
+			<div class="content row">
+
+	        	<div class="wide-md center">
+	        		<h1>Featured Projects</h1>
+					<p>Cepsum dolor sit amet consectetur to adipiscing elit, sed dot eiusmod tempor incididunt labore et dolore magna aliqua. Veniam quis nostrud exercitation ullamco laboris.</p>
+				</div>
+
+				<!-- Projects - Filter Menu -->
+				<div class="clear"></div>
+				<div class="gallery-lists gallery-project-lists filter-menu text-center">
+                    <ul class="list">
+                        <li class="active" data-filter="all">All</li>
+                        <li data-filter="1">Energy</li>
+                        <li data-filter="2">Oil and Gas</li>
+                        <li data-filter="3">Mining</li>
+                        <li data-filter="4">Welding</li>
+                    </ul>
+				</div>
+				<!-- Projects Filter section (!required 'gallery-filter' class name in gallery & also filter-menu section above) -->
+				<div class="gallery gallery-filter gallery-project gallery-filled project-morden with-caption hover-fade">
+					<ul class="photos-list col-x4">
+						<li class="filtr-item" data-category="1">
+						{% for project in projects %}
+							<div class="photo">
+								<img src="/static/cepat/image/work-sm-a.jpg" alt="">
+								<div class="photo-link">
+									<span class="links">
+		<a class="btn more-link" href="/cepat/project-detail/{{project.pk}}">View Projects</a>
+									</span>
+								</div>
+							</div>
+							
+<a href="/cepat/project-detail/{{project.pk}}">{{ project.project_title }}</a>
+{% endfor %}
+							
+							<div class="photo-caption">
+								<a href="project-single.html">
+									<h4></h4>
+								</a>
+							</div>
+						</li>
+						<li class="filtr-item" data-category="2">
+							<div class="photo">
+								<img src="/static/cepat/image/work-sm-b.jpg" alt="">
+								<div class="photo-link">
+									<span class="links">
+										<a class="btn more-link" href="project-single.html">View Projects</a>
+									</span>
+								</div>
+							</div>
+							<div class="photo-caption">
+								<a href="project-single.html">
+									<h4>Balko Wind Power</h4>
+								</a>
+							</div>
+						</li>
+						<li class="filtr-item" data-category="3">
+							<div class="photo">
+								<img src="/static/cepat/image/work-sm-c.jpg" alt="">
+								<div class="photo-link">
+									<span class="links">
+										<a class="btn more-link" href="project-single.html">View Projects</a>
+									</span>
+								</div>
+							</div>
+							<div class="photo-caption">
+								<a href="project-single.html">
+									<h4>Apollo Hill Project</h4>
+								</a>
+							</div>
+						</li>
+						<li class="filtr-item" data-category="3">
+							<div class="photo">
+								<img src="/static/cepat/image/work-sm-d.jpg" alt="">
+								<div class="photo-link">
+									<span class="links">
+										<a class="btn more-link" href="project-single.html">View Projects</a>
+									</span>
+								</div>
+							</div>
+							<div class="photo-caption">
+								<a href="project-single.html">
+									<h4>Osage Bio Energy Plants</h4>
+								</a>
+							</div>
+						</li>
+						<li class="filtr-item" data-category="4">
+							<div class="photo">
+								<img src="/static/cepat/image/work-sm-e.jpg" alt="">
+								<div class="photo-link">
+									<span class="links">
+										<a class="btn more-link" href="project-single.html">View Projects</a>
+									</span>
+								</div>
+							</div>
+							<div class="photo-caption">
+								<a href="project-single.html">
+									<h4>Rocky Forge Refinary</h4>
+								</a>
+							</div>
+						</li>
+						<li class="filtr-item" data-category="1, 3">
+							<div class="photo">
+								<img src="/static/cepat/image/work-sm-f.jpg" alt="">
+								<div class="photo-link">
+									<span class="links">
+										<a class="btn more-link" href="project-single.html">View Projects</a>
+									</span>
+								</div>
+							</div>
+							<div class="photo-caption">
+								<a href="project-single.html">
+									<h4>Mingo Village Mining</h4>
+								</a>
+							</div>
+						</li>
+
+						<li class="filtr-item" data-category="4">
+							<div class="photo">
+								<img src="/static/cepat/image/work-sm-g.jpg" alt="">
+								<div class="photo-link">
+									<span class="links">
+										<a class="btn more-link" href="project-single.html">View Projects</a>
+									</span>
+								</div>
+							</div>
+							<div class="photo-caption">
+								<a href="project-single.html">
+									<h4>First Freedom Center</h4>
+								</a>
+							</div>
+						</li>
+						<li class="filtr-item" data-category="2">
+							<div class="photo">
+								<img src="/static/cepat/image/work-sm-h.jpg" alt="">
+								<div class="photo-link">
+									<span class="links">
+										<a class="btn more-link" href="project-single.html">View Projects</a>
+									</span>
+								</div>
+							</div>
+							<div class="photo-caption">
+								<a href="project-single.html">
+									<h4>Branders Bridge Improvement</h4>
+								</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<!-- Project Gallery #end -->
+
+	        </div>
+	    </div>
+	</div>
+	<!-- End Section -->
+
+	
+
+
+
+
+
+
+
+
+{% endblock content %}

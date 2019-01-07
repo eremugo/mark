@@ -1,0 +1,14 @@
+{% extends 'cepat/base.html' %}
+{% block title %} CEPAT-South Sudan | upload{% endblock title %}
+{% block content %}
+<h1>Book Upload</h1>
+<div class="container">
+<form method="POST" enctype="multipart/form-data">
+{% csrf_token %}
+
+{{ form.as_p }}
+<button type="submit" class="btn btn_primary">Upload Book</button>
+</form>
+</div>
+<br>
+{% endblock content %}

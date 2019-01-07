@@ -1,0 +1,58 @@
+{% extends 'cepat/base.html' %}
+{% block title %} CEPAT-South Sudan | REPORT{% endblock title %}
+{% block content %}
+
+<!-- Banner -->
+		<div class="banner banner-static">
+			<div class="container">
+				<div class="content row">
+					
+					<div class="imagebg">
+						<img src="/static/cepat/image/banner-inside-f.jpg" alt="">
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<!-- End Banner -->
+
+<!-- Project Section -->
+	<div class="section section-projects section-pad">
+		<div class="container">
+			<h1>REPORTS' LIST</h1>
+
+<table class="table">
+<thead>
+
+    <tr>
+
+        <th>Title</th><th>Author</th><th>Download</th>
+    </tr>
+</thead>
+<tbody>
+    {% for book in books %}
+
+<tr>
+<a>View Reprt</a>
+<td>{{ book.title }}</td>
+<td>{{ book.author }}</td>
+<td><a href="{{ book.pdf.url }}" class="btn btn_primary">Download pdf</a></td>
+
+</tr>
+
+    {% endfor %}
+</tbody>
+</table>
+
+</div></div>				
+							
+							
+	
+	
+
+
+
+
+
+
+{% endblock content %}

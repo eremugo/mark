@@ -1,0 +1,157 @@
+{% extends 'cepat/base.html' %}
+{% block title %} CEPAT-South Sudan | History{% endblock title %}
+{% block content %}
+
+<!-- Banner -->
+		<div class="banner banner-static">
+			<div class="container">
+				<div class="content row">
+					
+					<div class="imagebg">
+						<img src="image/banner-inside-d.jpg" alt="">
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<!-- End Banner -->
+	</header>
+	<!-- End Header -->
+	
+	<!-- Contents -->
+	<div class="section section-contents section-pad">
+		<div class="container">
+			<div class="content row">
+			
+				<div class="row">
+					<div class="col-md-8">
+						
+						<h1>Investors Centre</h1>
+						
+						<div class="client-logo row space-top-md">
+							<div class="col-sm-4 col-xs-6 res-m-bttm-xs">
+								<img alt="" src="image/cl-logo1.png">
+							</div>
+							<div class="col-sm-8 col-xs-12">
+								<p>Lorem ipsum dolor sit amet consectetur to adipiscing elit, sed dot eiusmod tempor incididunt labore et dolore magna aliqua. Veniam quis nostrud exercitation ullamco laboris nisiut.</p>
+								<a href="#">www.websitename.com</a>
+							</div>
+						</div>
+						
+						<div class="client-logo row space-top-md">
+							<div class="col-sm-4 col-xs-6 res-m-bttm-xs">
+								<img alt="" src="image/cl-logo2.png">
+							</div>
+							<div class="col-sm-8 col-xs-12">
+								<p>Lorem ipsum dolor sit amet consectetur to adipiscing elit, sed dot eiusmod tempor incididunt labore et dolore magna aliqua. Veniam quis nostrud exercitation ullamco laboris nisiut.</p>
+								<a href="#">www.anotherwebsite.com.au</a>
+							</div>
+						</div>
+						<div class="client-logo row space-top-md">
+							<div class="col-sm-4 col-xs-6 res-m-bttm-xs">
+								<img alt="" src="image/cl-logo3.png">
+							</div>
+							<div class="col-sm-8 col-xs-12">
+								<p>Lorem ipsum dolor sit amet consectetur to adipiscing elit, sed dot eiusmod tempor incididunt labore et dolore magna aliqua. Veniam quis nostrud exercitation ullamco laboris nisiut.</p>
+								<a href="#">investorsite.com</a>
+							</div>
+						</div>
+						<div class="client-logo row space-top-md">
+							<div class="col-sm-4 col-xs-6 res-m-bttm-xs">
+								<img alt="" src="image/cl-logo4.png">
+							</div>
+							<div class="col-sm-8 col-xs-12">
+								<p>Lorem ipsum dolor sit amet consectetur to adipiscing elit, sed dot eiusmod tempor incididunt labore et dolore magna aliqua. Veniam quis nostrud exercitation ullamco laboris nisiut.</p>
+								<a href="#">industrysite.com</a>
+							</div>
+						</div>
+						
+						<div class="gaps"></div>
+						<hr>
+						<h4>Investor Fact Sheet</h4>
+						<p>Learn more about dolor sit amet consectetur to adipiscing elit eiusmod tempor incididunt labore et dolore magna aliqua, adipiscing elit eiusmod tempor incididunt labore.</p>
+						<p><a href="#" class="btn btn-md">Download</a></p>
+						<hr>
+						<h4>Latest Presentation</h4>
+						<p>Find out why assets are core for the amet consectetur to adipiscing elit eiusmod tempor incididunt labore.</p>
+						<p><a href="#" class="btn btn-md">Download</a></p>
+						<hr>
+						<h4>Analyst Coverage</h4>
+						<p>Review a list of Analysts elit eiusmod tempor incididunt labore et dolore magna aliqua.</p>
+						<p><a href="#" class="btn btn-md">View Details</a></p>
+						
+					</div>
+
+					<!-- Sidebar -->
+					<div class="col-md-4">
+						<div class="sidebar-right">
+
+							<div class="wgs-box wgs-menus">
+								<div class="wgs-content">
+									<ul class="list list-grouped">
+										<li class="list-heading">
+											<span>About Our Firms</span>
+											<ul>
+					<li><a href="{% url 'cepat:resource' %}">Overview</a></li>
+					<li><a href="{% url 'cepat:history' %}">Our History</a></li>
+					
+					<li><a href="{% url 'cepat:management' %}">Management Team</a></li>
+					<li><a href="{% url 'cepat:clients' %}">Our Clients</a></li>
+											</ul>
+										</li>
+					
+										
+									</ul>									
+								</div>
+							</div>
+
+							<div class="wgs-box wgs-quoteform">
+								<h3 class="wgs-heading">Quick Contact</h3>
+								<div class="wgs-content">
+									<p>If you have any questions or would like to book a session please contact us.</p>
+									<form  id="contact-us" class="form-quote" action="http://demo.themenio.com/industrial/form/contact.php" method="post">
+										<div class="form-results"></div>
+										<div class="form-group">
+											<div class="form-field">
+												<input name="contact-name" type="text" placeholder="Name *" class="form-control required">
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="form-field">
+												<input name="contact-email" type="email" placeholder="Email *" class="form-control required email">
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="form-field form-m-bttm">
+												<input name="contact-phone" type="text" placeholder="Phone" class="form-control">
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="form-field">
+												<input name="contact-service" type="text" placeholder="Interest of Service" class="form-control">
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="form-field">
+												<textarea name="contact-message" placeholder="Messages *" class="txtarea form-control required"></textarea>
+											</div>
+										</div>
+										<input type="text" class="hidden" name="form-anti-honeypot" value="">
+										<button type="submit" class="btn btn-alt sb-h">Submit</button>
+									</form>
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<!-- Sidebar #end -->
+				</div>
+				
+			</div>
+		</div>		
+	</div>
+	<!-- End Section -->
+
+
+
+{% endblock content %}

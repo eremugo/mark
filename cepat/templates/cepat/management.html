@@ -1,0 +1,137 @@
+{% extends 'cepat/base.html' %}
+{% block title %} CEPAT-South Sudan | History{% endblock title %}
+{% block content %}
+<!-- Banner -->
+		<div class="banner banner-static">
+			<div class="container">
+				<div class="content row">
+					
+					<div class="imagebg">
+						<img src="/static/cepat/image/banner-inside-d.jpg" alt="">
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<!-- End Banner -->
+	</header>
+	<!-- End Header -->
+
+	<div class="section section-contents section-pad">
+		<div class="container">
+			<div class="content row">
+			
+				<div class="row">
+					<div class="col-md-8">
+					
+						<h1>KEY PERSONNEL OF THE ORGANIZATION </h1>
+						<p>The management and operational arrangements of 
+						<strong>Centre for Promotion of Appropriate Technology (CEPAT)</strong> is structured in the following manner:</p>
+						<div class="team-profile">
+							<div class="team-member row">
+								<div class="team-photo col-md-4 col-sm-5 col-xs-12">
+									<img alt="" src="/static/cepat/image/team-1.jpg">
+								</div>
+						<div class="team-info col-md-8 col-sm-7 col-xs-12">
+									<h3 class="name">Kansio Kongu </h3>
+									<p class="sub-title"><strong>Programme Director</strong> - Head Of Office.</p>
+									
+									<p>He is an experienced Civil and Environmental Engineer (17 years’ experience) as well as an accomplished and professional Sustainable Energy, Water Supply, Sanitation and Hygiene Programme Management Specialist with proven leadership, management and technical experience in highly competitive positions with a number of international Non-Governmental Organizations. He has managed large humanitarian and development programme design, implementation and monitoring as well as managing programme costs, schedules and performance of programmes with multi-million annual budgets. He has strong interpersonal skills and positive work ethic, excellent negotiation skills, consistent record of forging strong partnerships.</p>
+								</div>
+							</div>
+						</div>
+						<div class="team-profile">
+							<div class="team-member row">
+								<div class="team-photo col-md-4 col-sm-5 col-xs-12">
+									<img alt="" src="/static/cepat/image/team-2.jpg">
+								</div>
+								<div class="team-info col-md-8 col-sm-7 col-xs-12">
+									<h3 class="name">Vuciri Mark Ben </h3>
+									<p class="sub-title"><strong>Programme Manager</strong> -Deputy Head Of Office</p>
+									<p>. He is a Social and Community Development Specialist. He has extensive programme management experience of over 10 years in emergency and recovery/development contexts. He also has over 5 years’ experience in community participation particularly in water and sanitation, biomass energy and forestry issues as well as implementation of socially appropriate household and community collective energy projects for local development. Mr. Vuciri is adept in utilizing social networks to identify opportunities for community outreach efforts, able to explain and promote a wide variety of community programmes.
+									 </p>
+									
+
+								</div>
+							</div>
+						</div>
+						<div class="team-profile">
+							<div class="team-member row">
+								<div class="team-photo col-md-4 col-sm-5 col-xs-12">
+									<img alt="" src="/static/cepat/image/team-1.jpg">
+								</div>
+								<div class="team-info col-md-8 col-sm-7 col-xs-12">
+									<h3 class="name">
+									Jamal Francis Katende </h3>
+									<p class="sub-title">
+									<strong>Chief Operating Officer</strong> -Livelihoods and Environment</p>
+									<p>He is a Livelihoods and Environment/Natural Resources Management Specialist with knowledge and relevant skills in programme development, monitoring and assessment. He has over 5 years’ community-level experience in a multi-cultural environment in development and humanitarian settings. Of this, 3 years have been in strategic planning, coordination, programmatic backstopping, monitoring and reporting on diverse sub-projects on livelihoods, environmental and energy conservation. Beforehand, Mr. Katende directly implemented and managed integrated livelihoods, energy and environment projects. </p>
+									
+
+								</div>
+							</div>
+						</div>						
+						<div class="team-profile">
+							<div class="team-member row">
+								<div class="team-photo col-md-4 col-sm-5 col-xs-12">
+									<img alt="" src="/static/cepat/image/team-2.jpg">
+								</div>
+								<div class="team-info col-md-8 col-sm-7 col-xs-12">
+									<h3 class="name">Amoko Geoffrey </h3>
+									<p class="sub-title"><strong>Operations Manager</strong></p>
+									<p>He is a savvy and experienced logistics, supply and business management specialist with a passion for rural and community development. He has over 10 years’ experience in working with NGOs and corporate bodies. He is committed to promoting high standards and organizational values. In the current job, he supports the Programme Director by taking care of operational support duties fostering a culture of accountability and ensures that organizational resources are used in the most cost-effective manner. He is a friendly, courteous and he has a professional approach.</p>
+								
+								</div>
+							</div>
+						</div>
+						
+					</div>
+
+					<!-- Sidebar -->
+					<div class="col-md-4">
+						<div class="sidebar-right">
+
+							<div class="wgs-box wgs-menus">
+								<div class="wgs-content">
+								<ul class="list list-grouped">
+										<li class="list-heading">
+											<span>About Our Firms</span>
+											<ul>
+					<li><a href="{% url 'cepat:resource' %}">Overview</a></li>
+					<li><a href="{% url 'cepat:history' %}">Our History</a></li>
+					
+					<li><a href="{% url 'cepat:management' %}">Management Team</a></li>
+					<li><a href="{% url 'cepat:clients' %}">Our Clients</a></li>
+											</ul>
+										</li>
+					
+										
+									</ul>
+								</div>
+							</div>
+
+							<div class="wgs-box wgs-quoteform">
+								<h3 class="wgs-heading">Quick Contact</h3>
+								<div class="wgs-content">
+									<p>If you have any questions or would like to book a session please contact us.</p>
+											{% load crispy_forms_tags %}
+        <form method="post">
+          {% csrf_token %}
+          {{ form | crispy }}
+          <button type="submit" class="btn btn-alt sb-h">Submit</button>
+      </form>
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<!-- Sidebar #end -->
+
+				</div>
+				
+			</div>
+		</div>		
+	</div>
+	<!-- End Section -->
+
+{% endblock content %}

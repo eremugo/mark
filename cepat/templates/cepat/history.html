@@ -1,0 +1,123 @@
+{% extends 'cepat/base.html' %}
+{% block title %} CEPAT-South Sudan | History{% endblock title %}
+{% block content %}
+
+<!-- Banner -->
+		<div class="banner banner-static">
+			<div class="container">
+				<div class="content row">
+					
+					<div class="imagebg">
+						<img src="/static/cepat/image/banner-inside-d.jpg" alt="">
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<!-- End Banner -->
+	</header>
+	<!-- End Header -->
+
+	<!-- Cnntent -->
+	<div class="section section-contents section-pad">
+		<div class="container">
+			<div class="content row">
+
+				<div class="row">
+					<div class="col-md-8">
+
+						<h1>Our History</h1>
+	<p><strong>Centre for Promotion of Appropriate Technology (CEPAT)</strong>
+	Was  registered on 9th May 2017 as  South Sudanese non-governmental organization,
+	With Registration No. 538.</p><p> 
+The mission of the organization is to promote, through enterprise-led approach, use of appropriate technology for implementation of sustainable grassroots projects that help provide solutions to health-related ailments, socio-economic inequalities and environmental issues by building skills, influencing people and supporting livelihoods and sustainable growth in economic opportunities. 
+</p>
+						<!-- Timelines -->
+						<div class="timelines">
+							
+							<div class="timeline">
+								<div class="tl-year">2018</div>
+								<div class="tl-content">
+									<h3 class="tl-title">Head Office</h3>
+									<div class="tl-text">
+										<p>Our HeadQuarter is suitiated at Munuki Block B.It's just next to South Sudan Reconstruction Commission.</p>
+									</div>
+								</div>
+							</div>
+							<!-- Each Timeline -->
+							<div class="timeline">
+								<div class="tl-year">2018</div>
+								<div class="tl-content">
+									<h3 class="tl-title">Work</h3>
+									<div class="tl-text">
+										<p>We work in the domain of promoting sustainable energy technologies, appropriate safe water and sanitation technologies, sustainable agriculture/agribusiness livelihood technologies, environmental management technologies and sustainable building technologies. </p>
+									</div>
+								</div>
+							</div>
+							<!-- End Each Timeline -->
+							<!-- Each Timeline 
+							<div class="timeline">
+								<div class="tl-year">1991</div>
+								<div class="tl-content">
+									<h3 class="tl-title">Best Awards</h3>
+									<div class="tl-text">
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut maximus orci. Curabitur feugiat scelerisque bibendum. Cras auctor scelerisque metus quis lobortis. Donec ut imperdiet diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices.</p>
+									</div>
+								</div>
+							</div>
+							End Each Timeline -->
+						</div>
+						
+						
+					</div>
+					
+					<!-- Sidebar -->
+					<div class="col-md-4">
+						<div class="sidebar-right">
+
+							<div class="wgs-box wgs-menus">
+								<div class="wgs-content">
+								<ul class="list list-grouped">
+										<li class="list-heading">
+											<span>About Our Firms</span>
+											<ul>
+					<li><a href="about-us.html">Overview</a></li>
+					<li><a href="{% url 'cepat:history' %}">Our History</a></li>
+					
+					<li><a href="{% url 'cepat:management' %}">Management Team</a></li>
+					<li><a href="{% url 'cepat:clients' %}">Our Clients</a></li>
+											</ul>
+										</li>
+					
+										
+									</ul>								
+								</div>
+							</div>
+
+							<div class="wgs-box wgs-quoteform">
+								<h3 class="wgs-heading">Quick Contact</h3>
+								<div class="wgs-content">
+									<p>If you have any questions or would like to book a session please contact us.</p>
+									{% load crispy_forms_tags %}
+        <form method="post">
+          {% csrf_token %}
+          {{ form | crispy }}
+          <button type="submit" class="btn btn-alt sb-h">Submit</button>
+      </form>
+										
+									
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<!-- Sidebar #end -->
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<!-- End Main content -->
+
+
+{% endblock content %}

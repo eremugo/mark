@@ -1,0 +1,131 @@
+{% extends 'cepat/base.html' %}
+{% block title %} CEPAT-South Sudan | NEWS DETAIL{% endblock title %}
+{% block content %}
+
+
+<!-- Banner -->
+		<div class="banner banner-static">
+			<div class="container">
+				<div class="content row">
+					<div class="banner-text">
+						<h1 class="page-title">Industry News</h1>
+					</div>
+					<div class="imagebg">
+						<img src="/static/cepat/image/banner-blog.jpg" alt="">
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<!-- End Banner -->
+	</header>
+	<!-- End Header -->
+
+	<!-- Content -->
+	<div class="section section-blog section-pad">
+		<div class="container">
+			<div class="content row">
+			
+				<div class="blog-wrapper row">
+					<div class="col-md-8 res-m-bttm">
+
+						<div class="post post-single">
+							<div class="post-thumbs">
+								<img alt="" src="/static/cepat/image/post-large-a.jpg">
+							</div>
+							<div class="post-meta">
+								<span class="pub-date"><em class="fa fa-calendar" aria-hidden="true"></em> {{ news.author}} </span>
+							</div>
+							<div class="post-entry">
+								<h1>{{ news.news_title}} </p>
+								<h3>{{ news.news_subtitle}}</h3>
+								<p>{{ news.news_body}}</p>
+								<ul class="list-style arrow">
+									<li>Complectitur noeum propriae liberavisse</li>
+									<li>Nullam repudiare liberavisse eosad.</li>
+									<li>Ei sea vidit percipit quo ne quodsi percipit.</li>
+								</ul>
+								
+							</div>
+						</div>
+						
+					</div>
+
+					<!-- Sidebar -->
+					<div class="col-md-4">
+						<div class="sidebar-right">
+							<div class="wgs-box wgs-search">
+								<div class="wgs-content">
+									<div class="form-group">
+										<input type="text" class="form-control"  placeholder="Search...">
+										<button class="search-btn"><i class="fa fa-search" aria-hidden="true"></i></button>
+									</div>
+								</div>
+							</div>
+
+							<div class="wgs-box wgs-recents">
+								<h3 class="wgs-heading">Recent Posts</h3>
+								<div class="wgs-content">
+									<ul class="blog-recent">
+									{% for nan in nans %}
+										<li>
+											<a href="news-details.html">
+										<img alt="" src="{{ nan.news_image.url }}">
+												<p>{{ nan.news_title }}</p>
+											</a>
+										</li>
+										{% endfor %}
+										<li>
+											<a href="news-details.html">
+												<img alt="" src="/static/cepat/image/post-thumb-b.jpg">
+												<p>Sed ut perspiciatis unde omnis iste natus error sit volup accus antium doloremque laudantiu...</p>
+											</a>
+										</li>
+										
+									</ul>
+								</div>
+							</div>
+
+							
+
+							<div class="wgs-box wgs-contact-info">
+								<h3 class="wgs-heading">Contact Information</h3>
+								<div class="wgs-content boxed">
+									<ul class="contact-list">
+										<li>
+											<i class="fa fa-map" aria-hidden="true"></i>
+											<span>1234 Sed ut perspiciatis Road, <br>At vero eos, D58 8975, London.</span>
+										</li>
+										<li>
+											<i class="fa fa-phone" aria-hidden="true"></i>
+											<span>(123) 4567 8910</span>
+										</li>
+										<li>
+											<i class="fa fa-envelope" aria-hidden="true"></i>
+											<span>Email : <a href="#">info@sitename.com</a></span>
+										</li>
+									</ul>
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<!-- Sidebar #end -->
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<!-- End Content -->
+	
+
+
+
+
+
+
+
+
+
+{% endblock content %}

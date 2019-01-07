@@ -1,0 +1,124 @@
+{% extends 'cepat/base.html' %}
+{% block title %} CEPAT-South Sudan | History{% endblock title %}
+{% block content %}
+<!-- Banner -->
+		<div class="banner banner-static">
+			<div class="container">
+				<div class="content row">
+				
+					<div class="imagebg">
+						<img src="/static/cepat/image/banner-inside-a.jpg" alt="">
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<!-- End Banner -->
+	</header>
+	<!-- End Header -->
+
+	<!-- Contents -->
+	<div class="section section-contents section-pad">
+		<div class="container">
+			<div class="content row">
+
+				<div class="row">
+					<div class="col-md-8">
+
+						<h1>Our Clients</h1>
+						<p>Egestas tortor placerat vehicula. Nulla tincidunt risus nisl sed iaculis elit dapibus. Suspen disse quis lorem nibh a magna sollicitudin, semper justo a sagittis est. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia.</p>
+						
+						<div class="row">
+							<div class="col-sm-6 col-xs-6">
+								<div class="logo-item"><img alt="" src="/static/cepat/image/cl-logo1.png"></div>
+							</div>
+							<div class="col-sm-6 col-xs-6">
+								<div class="logo-item"><img alt="" src="/static/cepat/image/cl-logo2.png"></div>
+							</div>
+							
+							<div class="gaps size-md"></div>
+							<div class="col-sm-6 col-xs-6">
+								<div class="logo-item"><img alt="" src="/static/cepat/image/cl-logo3.png"></div>
+							</div>
+							<div class="col-sm-6 col-xs-6">
+								<div class="logo-item"><img alt="" src="/static/cepat/image/cl-logo4.png"></div>
+							</div>
+							
+							<div class="gaps size-md"></div>
+							<div class="col-sm-6 col-xs-6">
+								<div class="logo-item"><img alt="" src="/static/cepat/image/cl-logo5.png"></div>
+							</div>
+							<div class="col-sm-6 col-xs-6">
+								<div class="logo-item"><img alt="" src="/static/cepat/image/cl-logo6.png"></div>
+							</div>
+						</div>
+						
+						<div class="gaps size-lg"></div>
+						<h2>Our Sponsors</h2>
+						<p>Sed non orci placerat, ultricies eros aenean sed magna lacus nuris a lectus sollicitudin.</p>
+
+						<div class="row">
+							<div class="col-sm-6 col-xs-6">
+								<div class="logo-item"><img alt="" src="/static/cepat/image/cl-logo7.png"></div>
+							</div>
+							<div class="col-sm-6 col-xs-6">
+								<div class="logo-item"><img alt="" src="/static/cepat/image/cl-logo8.png"></div>
+							</div>
+							<div class="gaps size-md"></div>
+							<div class="col-sm-6 col-xs-6">
+								<div class="logo-item"><img alt="" src="/static/cepat/image/cl-logo2.png"></div>
+							</div>
+							<div class="col-sm-6 col-xs-6">
+								<div class="logo-item"><img alt="" src="/static/cepat/image/cl-logo5.png"></div>
+							</div>
+						</div>
+						
+					</div>
+					
+					<!-- Sidebar -->
+					<div class="col-md-4">
+						<div class="sidebar-right">
+
+							<div class="wgs-box wgs-menus">
+								<div class="wgs-content">
+									<ul class="list list-grouped">
+										<li class="list-heading">
+											<span>About Our Firms</span>
+											<ul>
+					<li><a href="{% url 'cepat:resource' %}">Overview</a></li>
+					<li><a href="{% url 'cepat:history' %}">Our History</a></li>
+					
+					<li><a href="{% url 'cepat:management' %}">Management Team</a></li>
+					<li><a href="{% url 'cepat:clients' %}">Our Clients</a></li>
+											</ul>
+										</li>
+					
+										
+									</ul>		
+								</div>
+							</div>
+
+							<div class="wgs-box wgs-quoteform">
+								<h3 class="wgs-heading">Quick Contact</h3>
+								<div class="wgs-content">
+									<p>If you have any questions or would like to book a session please contact us.</p>
+									{% load crispy_forms_tags %}
+        <form method="post">
+          {% csrf_token %}
+          {{ form | crispy }}
+          <button type="submit" class="btn btn-alt sb-h">Submit</button>
+      </form>
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<!-- Sidebar #end -->
+				</div>
+				
+			</div>
+		</div>	
+	</div>
+	<!-- End Section -->
+
+{% endblock %}

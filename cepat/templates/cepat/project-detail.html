@@ -1,0 +1,156 @@
+{% extends 'cepat/base.html' %}
+{% block title %} CEPAT-South Sudan | PROJECT DETAIL{% endblock title %}
+{% block content %}
+
+
+
+<!-- Banner -->
+		<div class="banner banner-static">
+			<div class="container">
+				<div class="content row">
+					
+					<div class="imagebg">
+						<img src="/static/cepat/image/banner-inside-f.jpg" alt="">
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<!-- End Banner -->
+	</header>
+	<!-- End Header -->
+
+	<!-- Content -->
+
+
+	<div class="section section-projects single-project section-pad">
+		<div class="container">
+			<div class="content row">
+
+				<div class="project-info">
+				
+					
+					<h1>{{ project.project_title }}</h1>
+
+
+
+					
+					<div class="row">
+						<div class="col-md-6 col-sm-12 res-m-bttm">
+							<p>{{ project.project_detail}}</p>
+						</div>
+						<div class="col-md-5 col-sm-12 col-md-offset-1">
+							<h3>At a Glance</h3>
+							<div class="table-responsive">
+								<table class="table table-striped bdr-bottom">
+									<tbody>
+										<tr>
+											<td><strong>Finish Date</strong></td>
+											<td>{{ project.date_of_finish}}</td>
+										</tr>
+										<tr>
+											<td><strong>Clients</strong></td>
+											<td>{{ project.client}} </td>
+										</tr>
+										
+										<tr>
+											<td><strong>Location</strong></td>
+											<td>{{ project.location}}</td>
+										</tr>
+										<tr>
+											<td><strong>Surface Area</strong></td>
+											<td>{{ project.Surface_area}}</td>
+										</tr>
+										<tr>
+											<td><strong>Services Rendered</strong></td>
+											<td>{{ project.service_surface}}</td>
+										</tr>
+										<tr>
+											<td><strong>Project Cost</strong></td>
+											<td>${{ project.project_cost}} </td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="gaps size-md"></div>
+					<div class="row">
+						<div class="col-md-6 col-sm-12 res-m-bttm">
+							<h3>Project Summary</h3>
+							<p>{{project.project_summary}}</p>
+						</div>
+						
+						<div class="col-md-5 col-sm-12 col-md-offset-1">
+							<h3>Final Results</h3>
+							<p>{{ project.project_results}}</p>
+							<!-- <img src="{{ project.project_image.image.url }}" />-->
+						</div>
+					</div>
+				</div>
+				<hr>
+				<div class="project-gallery">
+					<h3 class="heading-section heading-sm">Project Gallery</h3>
+					<div class="gallery gallery-lightbox gallery-photos gallery-filled hover-zoom">
+						<ul class="photos-list col-x4">
+							<li>
+								<a href="{{ project.p_image.url }}">
+								<div class="photo">
+									<img src="{{ project.p_image.url }}" alt="Photo Title">
+								</div>
+								</a>
+							</li>
+							
+						</ul>
+					</div>
+					<!-- Gallery #end -->
+				</div>
+	       
+			</div>
+		</div>
+	</div>
+	<!-- End Content -->
+
+	<!-- Project Section @Related -->
+	<div class="section section-projects recent-project section-pad bg-light">
+	    <div class="container">
+	        <div class="content row">
+
+				<h3 class="heading-section">Related Projects</h3>
+	        	<!-- Projects/Feature Row  -->
+	        	
+				<div class="feature-row feature-project-row mgfix">
+					<div class="owl-carousel loop has-carousel" data-items="4" data-navs="true">
+						<div class="even">
+						
+							<!-- featured box  -->
+							<div class="feature feature-project boxed">
+								<a href="project-single.html">
+									<div class="fbox-photo">
+										<img src="{{ project.p_image.url }}" alt="">
+									</div>
+								</a>
+								<div class="fbox-content">
+				<h3><a href="project-single.html">{{ project.project_title}}</a></h3>
+								</div>
+							</div>
+							<!-- End -->
+						</div>
+						<div class="odd">
+					
+						</div>
+					</div>
+				</div>
+				<!-- Projects/Feature Row  #end -->
+
+	        </div>
+	    </div>
+	</div>
+	<!-- End Section -->	
+
+
+
+
+
+{% endblock content %}

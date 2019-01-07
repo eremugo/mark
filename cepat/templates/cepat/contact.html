@@ -1,0 +1,69 @@
+{% extends 'cepat/base.html' %}
+{% block title %} CEPAT-South Sudan | CONTACT{% endblock title %}
+{% block content %}
+
+
+
+<!-- Banner -->
+<div class="banner banner-static">
+  <div class="container">
+    <div class="content row">
+      
+      <div class="imagebg">
+        <img src="/static/cepat/image/banner-contact.jpg" alt="">
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Banner -->
+</header>
+<!-- End Header -->
+
+<!-- Content -->
+<div class="section section-contents section-contact section-pad">
+<div class="container">
+  <div class="content row">
+
+    <h1>Contact Us</h1>
+    <div class="contact-content row">
+      <div class="drop-message col-md-7 res-m-bttm">
+        <p>Want to work with us or need more details about consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolor.</p>
+
+{% load crispy_forms_tags %}
+        <form method="post">
+          {% csrf_token %}
+          {{ form | crispy }}
+          <button type="submit" class="btn btn-primary">Send</button>
+      </form>
+      </div>
+
+
+
+      <div class="contact-details col-md-4 col-md-offset-1">
+        <ul class="contact-list">
+          <li><em class="fa fa-map" aria-hidden="true"></em>
+            <span>Munuki Block B, Next to South Sudan Reconstruction Commission. <br>JUBA, South Sudan.</span>
+          </li>
+          <li><em class="fa fa-phone" aria-hidden="true"></em>
+            <span>Primary Contact : +211 (0) 916 861 386<br> 
+                  Telephone : (+211)  925 664 313</span>
+          </li>
+          <li><em class="fa fa-envelope" aria-hidden="true"></em>
+            <span>Email : <a href="#">cepat.southsudan@gmail.com</a></span>
+          </li>
+          <li>
+            <em class="fa fa-clock-o" aria-hidden="true"></em>
+            <span>Mon - Sat: 8 AM - 5 PM </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>
+<!-- End Content -->
+
+
+
+{% endblock content %}
