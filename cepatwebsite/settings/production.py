@@ -138,11 +138,11 @@ STATIC_URL = '/static/'
 
 if not DEBUG:
    MEDIA_URL = '/media/'
-   MEDIA_ROOT =  os.path.join(os.path.dirname(BASE_DIR), '/cepatwebsite.herokuapp.com/media')
-   STATIC_ROOT =  os.path.join(os.path.dirname(BASE_DIR), '/cepatwebsite.herokuapp.com/static')
+   MEDIA_ROOT =  '/cepatwebsite.herokuapp.com/media'
+   STATIC_ROOT =  '/cepatwebsite.herokuapp.com/static'
 
    STATICFILES_DIRS= ( 
-       os.path.join(os.path.dirname(BASE_DIR), '/cepatwebsite.herokuapp.com/static') 
+        '/cepatwebsite.herokuapp.com/static' 
     )
 
 
