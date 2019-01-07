@@ -35,7 +35,7 @@ SECRET_KEY = 'ok!jyb&94$zjh3+zc2sz+#=r3ftm8%#a0b#j9(+6$u7t-ynyi)'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['cepatwebsite.herokuapp.com']
 
 
 # Application definition
