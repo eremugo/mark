@@ -16,6 +16,16 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 
+EMAIL_HOST= 'smtp.gmail.com'
+EMAIL_HOST_USER= 'youremail@gmail.com'
+EMAIL_HOST_PASSWORD= 'yourpassword'
+EMAIL_PORT= 587
+EMAIL_USE_TLS= True
+DEFAULT_FROM_EMAIL= 'your name <you@email.com>'
+
+ADMINS = ( 'You', 'you@gmail.com'),
+MANAGERS = ADMINS
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 

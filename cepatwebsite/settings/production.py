@@ -15,6 +15,15 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
+EMAIL_HOST= 'smtp.gmail.com'
+EMAIL_HOST_USER= 'youremail@gmail.com'
+EMAIL_HOST_PASSWORD= 'yourpassword'
+EMAIL_PORT= 587
+EMAIL_USE_TLS= True
+DEFAULT_FROM_EMAIL= 'your name <you@email.com>'
+
+ADMINS = ( 'You', 'you@gmail.com'),
+MANAGERS = ADMINS
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
@@ -25,7 +34,7 @@ SECRET_KEY = 'ok!jyb&94$zjh3+zc2sz+#=r3ftm8%#a0b#j9(+6$u7t-ynyi)'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['cepatwebsite.herokuapp.com', '.cepat.org']
 
 
 # Application definition
@@ -75,16 +84,21 @@ WSGI_APPLICATION = 'cepatwebsite.wsgi.application'
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
+    #'default': {
+       # 'ENGINE': 'django.db.backends.mysql',
        
-        'NAME':'cepatt',
-        'PASSWORD':'',
-        'USER':'root',
-        'HOST':'localhost',
-    }
+        #'NAME':'cepatt',
+        #'PASSWORD':'',
+        #'USER':'root',
+        #'HOST':'localhost',
+   # }
 }
 
+# add this
+import dj_database_url
+db_from_env = dj_database_url.config()
+DATABASES['default'].update(db_from_env)
+#DATABASES['default']['CONN_MAX_AGE'] = 500
 
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
