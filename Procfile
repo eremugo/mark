@@ -1,1 +1,1 @@
-"web: gunicorn cepatwebsite.wsgi" 
+web: gunicorn dj-project.wsgi 
