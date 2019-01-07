@@ -17,7 +17,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 
 EMAIL_HOST= 'smtp.gmail.com'
 EMAIL_HOST_USER= 'youremail@gmail.com'
-EMAIL_HOST_PASSWORD= 'yourpassword'
+EMAIL_HOST_PASSWORD=  os.environ.get('EMAIL_HOST_PASSWORD')
 EMAIL_PORT= 587
 EMAIL_USE_TLS= True
 DEFAULT_FROM_EMAIL= 'your name <you@email.com>'
@@ -29,7 +29,7 @@ MANAGERS = ADMINS
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'ok!jyb&94$zjh3+zc2sz+#=r3ftm8%#a0b#j9(+6$u7t-ynyi)'
+SECRET_KEY =  os.environ.get('SECRET_KEY', 'ok!jyb&94$zjh3+zc2sz+#=r3ftm8%#a0b#j9(+6$u7t-ynyi)')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -84,14 +84,14 @@ WSGI_APPLICATION = 'cepatwebsite.wsgi.application'
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
 DATABASES = {
-    #'default': {
-       # 'ENGINE': 'django.db.backends.mysql',
+   'default': {
+       'ENGINE': 'django.db.backends.mysql',
        
-        #'NAME':'cepatt',
-        #'PASSWORD':'',
-        #'USER':'root',
-        #'HOST':'localhost',
-   # }
+       'NAME':'cepatt',
+       'PASSWORD':'',
+       'USER':'root',
+       'HOST':'localhost',
+   }
 }
 
 # add this
