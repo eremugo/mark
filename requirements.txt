@@ -7,7 +7,7 @@ Django==2.1.1
 django-crispy-forms==1.7.2
 django-filetransfers==0.1.0
 django-paypal==0.2.5
-djangorestframework==3.9.0
+djangorestframework==3.11.2
 gunicorn==19.9.0
 idna==2.8
 isort==4.3.4
